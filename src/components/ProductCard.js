@@ -10,6 +10,10 @@ export function ProductCard() {
     price: 999,
   };
 
+  function handleClick(product) {
+    alert(`You clicked on ${product.title} which cost ${product.price}`);
+  }
+
   function getProductTitle() {
     return product.title;
   }
@@ -37,7 +41,9 @@ export function ProductCard() {
         <li>{product.specification[1]}</li>
         <li>{product.specification[2]}</li>
       </ul>
-      <button>Buy (From ${product.price})</button>
+      <button onClick={() => handleClick(product)}>
+        Buy (From ${product.price})
+      </button>
     </article>
   );
 }

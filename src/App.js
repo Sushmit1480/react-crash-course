@@ -19,7 +19,9 @@ function App() {
     <div className="App">
       <ProductList>
         <ProductCard />
+        <ProductCard2 background="darkolivegreen" product={product} />
         <ProductCard2 product={product} />
+        <ProductCard2 background="peru" product={product} />
       </ProductList>
     </div>
   );
